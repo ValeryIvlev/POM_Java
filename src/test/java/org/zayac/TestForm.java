@@ -6,10 +6,8 @@ import org.junit.jupiter.api.Test;
 
 public class TestForm extends TestBase {
 
-
     @Test
     void testFromV1() {
-
         registrationPage.openPage()
                 .setFirstName("Ivan")
                 .setLastName("Ivanov")
@@ -25,7 +23,6 @@ public class TestForm extends TestBase {
                 .setState("NCR")
                 .setCity("Delhi");
 
-
         registrationPage.verifyResultsModalAppears()
                 .verifyResult("Student Name", "Ivan Ivanov")
                 .verifyResult("Student Email", "Mail@mail.ru")
@@ -35,8 +32,5 @@ public class TestForm extends TestBase {
                 .verifyResult("Picture", "File1.png")
                 .verifyResult("Address", "Subject one or no one:)")
                 .verifyResult("State and City", "NCR Delhi");
-
-
     }
-
 }
